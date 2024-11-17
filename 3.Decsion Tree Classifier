@@ -29,7 +29,7 @@ def predict(query, clf, feature_names,df):
     prediction = clf.predict([query_encoded]) # Predict using the encoded query
     return 'Yes' if prediction == 1 else 'No' # Return the prediction
 
-prediction = predict(query, clf, df.columns[:-1].tolist(), df) 
+prediction = predict(query, clf, df.columns[:-1].tolist(), df) //ERROR
 print(f"Prediction for {query}: {prediction}")
 
 # Assuming df_encoded is the DataFrame used to train the model
